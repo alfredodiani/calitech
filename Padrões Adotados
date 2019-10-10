@@ -1,1 +1,8 @@
 
+# Características que devem ser obedecidas:
+Nomenclaturas dos requisitos utilizarão: o RF e RNF, RF para requisitos funcionais. E RNF para requisitos não funcionais. 
+
+## Regras que o documento de requisitos seguirá:
+1.Evitar requistos grandes, caso sejam extensos dividir o requisito.
+2.Evitar as palavras: (ou, se necessário, mas, contudo, entretanto, usualmente, geralmente, frequentemente, tipicamente, amigável,versátil, flexível). 
+3.Definir um requisito por vez.
