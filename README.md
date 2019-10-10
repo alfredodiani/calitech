@@ -4,12 +4,8 @@ Nosso sistema será para auxiliar uma rede de transportes aéreos, pessoas compr
 Os usuários previstos são adultos que entendem de tecnologia e desejam comprar de forma fácil uma passagem de avião. 
 
 
-#TECNOLOGIAS UTILIZADAS:
-Utilizaremos para desenvolver nosso sistema utilizaremos a linguagem PHP e banco de dados ....
-
-
-
-
+TECNOLOGIAS UTILIZADAS:
+Utilizaremos para desenvolver nosso sistema utilizaremos a linguagem PHP e banco de dados MySQL, com inteface phpmyadmin. 
 
 Tabelas:
 Usuário
