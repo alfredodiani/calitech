@@ -5,4 +5,4 @@ Os usuários previstos são adultos que entendem de tecnologia e desejam comprar
 
 
 TECNOLOGIAS UTILIZADAS: 
-Utilizaremos para desenvolver nosso sistema utilizaremos a linguagem PHP e banco de dados MySQL, com inteface phpmyadmin. 
+Utilizaremos para desenvolver nosso sistema utilizaremos a linguagem PHP e banco de dados MySQL, com inteface phpmyadmin e MySQL Workbench. 
