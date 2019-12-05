@@ -196,6 +196,14 @@ iframe {
 /*------------------------------------------------------------------
 [ Input ]*/
 
+.my-input {
+  width: 50%;
+  position: relative;
+  border-bottom: 2px solid #d9d9d9;
+  padding-bottom: 13px;
+  margin-bottom: 27px;
+}
+
 .wrap-input100 {
   width: 100%;
   position: relative;
@@ -213,7 +221,7 @@ iframe {
 }
 
 .input100 {
-  display: block;
+  display: inline;
   width: 100%;
   background: transparent;
   font-family: Poppins-Medium;
@@ -265,7 +273,7 @@ textarea.input100 {
 
 
 .input100:focus + .focus-input100::before {
-  width: 100%;
+  width: 50%;
 }
 
 .has-val.input100 + .focus-input100::before {

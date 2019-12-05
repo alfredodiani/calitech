@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Form engenharia</title>
+	<title>Cadastro</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<form action= "C_cadastrarUsuario.php" method="POST" >
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -32,41 +33,61 @@
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" autocomplete="on" method="get" action="show.php">
 				<span class="contact100-form-title">
-					Login
+					Meus voos
 				</span>
 
 				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Email</span>
-					<input class="input100" type="email" name="email" placeholder="Digite seu email">
+					<input class="input100" type="text" name="cNome" placeholder="Origem">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Senha</span>
-					<input class="input100" type="passoword" name="cSenha" placeholder="Digite sua senha">
+					<input class="input100" type="text" name="cNome" placeholder="Destino">
 					<span class="focus-input100"></span>
 				</div>
+				<br>
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Data de partida</span>
+					<input class="input100" type="date" name="cDataNascimento" placeholder="Digite sua data de nascimento">
+					<span class="focus-input100"></span>
+				</div>	
 
-				<a href="mcv/View/buscarVoo.html">
+				<table style="width:100%">
+				  <tr>
+				    <th>Origem</th>
+				    <th>Destino</th>
+				    <th>Partida</th>
+				    <th></th>
+				  </tr>
+				  <tr>
+				    <td>Aparecida</td>
+				    <td>Lavras</td>
+				    <td>13/05 13h</td>
+				    <td>
+						<a href="visualizarPassagem.html">
+							Visualizar
+				    	</a>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>Lavras</td>
+				    <td>Aparecida</td>
+				    <td>15/05 13h</td>
+				    <td>
+						<a href="visualizarPassagem.html">
+							Visualizar
+				    	</a>
+					</td>
+				  </tr>
+				</table>
+				<br>
+				<a href="buscarVoo.html">
 					<div class="container-contact100-form-btn">
 						<div class="wrap-contact100-form-btn">
 							<div class="contact100-form-bgbtn"></div>
 							<button class="contact100-form-btn" type="button">
 									<span>
-										Entrar
-									</span>
-							</button>
-						</div>
-					</div>
-				</a>
-
-				<a href="mcv/View/cadastrarUsuario.html">
-					<div class="container-contact100-form-btn">
-						<div class="wrap-contact100-form-btn">
-							<div class="contact100-form-bgbtn"></div>
-							<button class="contact100-form-btn" type="button">
-									<span>
-										Cadastre-se
+										Voltar
 									</span>
 							</button>
 						</div>
