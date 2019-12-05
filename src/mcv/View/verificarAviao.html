@@ -33,71 +33,69 @@
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" autocomplete="on" method="get" action="show.php">
 				<span class="contact100-form-title">
-					Voo
+					Verificar aviões
 				</span>
 
-				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Origem</span>
-					<input class="input100" type="text" name="cNome" disabled>
-					Aparecida
-				</div>
-
-				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Destino</span>
-					<input class="input100" type="text" name="cNome" disabled>
-					Lavras
-				</div>
-
-				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Data de partida</span>
-					<input class="input100" type="text" name="cNome" disabled>
-					15/01 13h
-				</div>
-
-				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Previsão chegada</span>
-					<input class="input100" type="text" name="cNome" disabled>
-					15/01 15h
-				</div>
-
-				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Distancia</span>
-					<input class="input100" type="text" name="cNome" disabled>
-					240km
-				</div>
-
-				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Companhia</span>
-					<input class="input100" type="text" name="cNome" disabled>
-					TAM
-				</div>
-
-				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Id Aviao</span>
-					<input class="input100" type="text" name="cNome" disabled>
-					0415
-				</div>
-
-				<a href="meusVoos.html">
+				<table style="width:100%">
+				  <tr>
+				    <th>Id</th>
+				    <th>Marca</th>
+				    <th>Nome</th>
+				    <th></th>
+				  </tr>
+				  <tr>
+				    <td>0154</td>
+				    <td>TAM</td>
+				    <td>LTC-42700</td>
+				    <td>
+						<a href="alterarAviao.html">
+							Visualizar
+				    	</a>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>2154</td>
+				    <td>Azul</td>
+				    <td>LCE-45790</td>
+				    <td>
+						<a href="alterarAviao.html">
+							Visualizar
+				    	</a>
+					</td>
+				  </tr>
+				</table>
+				<br>
+				<a href="cadastrarAviao.html">
 					<div class="container-contact100-form-btn">
 						<div class="wrap-contact100-form-btn">
 							<div class="contact100-form-bgbtn"></div>
 							<button class="contact100-form-btn" type="button">
 									<span>
-										Cancelar Passagem
+										Cadastrar novo
 									</span>
 							</button>
 						</div>
 					</div>
 				</a>
-
-				<a href="meusVoos.html">
+				<a href="buscarVoo.html">
 					<div class="container-contact100-form-btn">
 						<div class="wrap-contact100-form-btn">
 							<div class="contact100-form-bgbtn"></div>
 							<button class="contact100-form-btn" type="button">
 									<span>
 										Voltar
+									</span>
+							</button>
+						</div>
+					</div>
+				</a>
+				<a href="verificarVoo.html">
+					<div class="container-contact100-form-btn">
+						<div class="wrap-contact100-form-btn">
+							<div class="contact100-form-bgbtn"></div>
+							<button class="contact100-form-btn" type="button">
+									<span>
+										Visualizar Voos
 									</span>
 							</button>
 						</div>
