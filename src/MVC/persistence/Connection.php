@@ -1,16 +1,12 @@
 <?php
 	class Connection {
-		var $servidor;
-		var $user;
-		var $pwd;
-		var $bd;
+		var $servidor = 'localhost';
+		var $user = 'root';
+		var $pwd = '';
+		var $bd = 'calitech';
 		var $link;
 		
-		function __construct($vservidor, $vuser, $vpwd, $vbd) {
-			$this->servidor = $vservidor;
-			$this->user = $vuser;
-			$this->pwd = $vpwd;
-			$this->bd = $vbd;
+		function __construct() {
 		}
 		
 		function conectar() {
