@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Form engenharia</title>
+	<title>Cadastro</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<form action= "C_cadastrarUsuario.php" method="POST" >
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -32,41 +33,75 @@
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" autocomplete="on" method="get" action="show.php">
 				<span class="contact100-form-title">
-					Login
+					Alterar passagem
 				</span>
 
 				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Email</span>
-					<input class="input100" type="email" name="email" placeholder="Digite seu email">
-					<span class="focus-input100"></span>
+					<span class="label-input100">Origem</span>
+					<input class="input100" type="text" name="cNome" disabled value="Aparecida">
+					
 				</div>
 
 				<div class="wrap-input100 validate-input">
-					<span class="label-input100">Senha</span>
-					<input class="input100" type="passoword" name="cSenha" placeholder="Digite sua senha">
-					<span class="focus-input100"></span>
+					<span class="label-input100">Destino</span>
+					<input class="input100" type="text" name="cNome" disabled value="Lavras">
+					
 				</div>
 
-				<a href="MVC/View/buscarVoo.html">
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Data de partida</span>
+					<input class="input100" type="text" name="cNome" disabled value="15/01 13h">
+					
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Previsão chegada</span>
+					<input class="input100" type="text" name="cNome" disabled value="15/01 15h">
+					
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Distancia</span>
+					<input class="input100" type="text" name="cNome" disabled value="240km">
+					
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Companhia</span>
+					<input class="input100" type="text" name="cNome" disabled value="TAM">
+					
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Id Aviao</span>
+					<input class="input100" type="text" name="cNome" disabled value="0415">
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Numero da passagem</span>
+					<input class="input100" type="text" name="cNome" value="0415">
+				</div>
+
+				<a href="verificarPassagem.html">
 					<div class="container-contact100-form-btn">
 						<div class="wrap-contact100-form-btn">
 							<div class="contact100-form-bgbtn"></div>
 							<button class="contact100-form-btn" type="button">
 									<span>
-										Entrar
+										Alterar Passagem
 									</span>
 							</button>
 						</div>
 					</div>
 				</a>
 
-				<a href="MVC/View/cadastrarUsuario.html">
+				<a href="verificarPassagem.html">
 					<div class="container-contact100-form-btn">
 						<div class="wrap-contact100-form-btn">
 							<div class="contact100-form-bgbtn"></div>
 							<button class="contact100-form-btn" type="button">
 									<span>
-										Cadastre-se
+										Voltar
 									</span>
 							</button>
 						</div>
