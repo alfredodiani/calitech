@@ -70,12 +70,12 @@ CREATE TABLE IF NOT EXISTS `calitech`.`Passagem` (
   PRIMARY KEY (`idPassagem`),
   CONSTRAINT `fk_Passagem_Voo1`
     FOREIGN KEY (`idVoo`)
-    REFERENCES `mydb`.`Voo` (`idVoo`)
+    REFERENCES `calitech`.`Voo` (`idVoo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Passagem_Usuario1`
     FOREIGN KEY (`idUser`)
-    REFERENCES `mydb`.`Usuario` (`idUser`)
+    REFERENCES `calitech`.`Usuario` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `calitech`.`Admin` (
   PRIMARY KEY (`idUser`),
   CONSTRAINT `fk_Admin_Usuario1`
     FOREIGN KEY (`idUser`)
-    REFERENCES `mydb`.`Usuario` (`idUser`)
+    REFERENCES `calitech`.`Usuario` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
