@@ -14,6 +14,7 @@
 	echo "<br>";
 	echo $_POST["vCap"];
 
+
 	$aviao = new Aviao($_POST["vId"], $_POST["vModelo"], $_POST["vMarca"], $_POST["vCap"]);
 
 	$aviaodao = new AviaoDAO();

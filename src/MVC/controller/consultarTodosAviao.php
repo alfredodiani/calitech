@@ -17,6 +17,7 @@
 		echo "    <th>Id</th>";
 		echo "    <th>Modelo</th>";
 		echo "    <th>Marca</th>";
+		echo "    <th>Assentos</th>";
 		echo "    <th></th>";
 		echo "  </tr>";
 		while($linha = $linhas->fetch_assoc()){
@@ -25,6 +26,7 @@
 			echo "    <td>".$linha['prefixoAviao']."</td>";
 			echo "    <td>".$linha['modelo']."</td>";
 			echo "    <td>".$linha['fabricante']."</td>";
+			echo "    <td>".$linha['qtdAssentos']."</td>";
 			echo "    <td>";
 			echo "				<a href=\"consultarAviao.php?id=".$linha['prefixoAviao']."\">";
 			echo "							Visualizar";

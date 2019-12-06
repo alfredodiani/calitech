@@ -20,7 +20,7 @@
 		function getPrefixo() {return $this->prefixo;}
 		function getModelo() {return $this->modelo;}
 		function getFabricante() {return $this->fabricante;}
-		function getQtdAssentos() {return $this->QtdAssentos;}
+		function getQtdAssentos() {return $this->qtdAssentos;}
 		
 		function setPrefixo($vprefixo) {$this->prefixo = $vprefixo;}
 		function setModelo($vmodelo) {$this->modelo = $vmodelo;}
