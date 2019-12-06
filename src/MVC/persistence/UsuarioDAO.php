@@ -4,10 +4,10 @@
 	class UsuarioDAO {
 		function cadastrar($usuario, $link) {
 			$query = "INSERT INTO Usuario (nomeUser, nascimento, email, login, senha) values ('".($usuario->getNome())."','".($usuario->getNascimento())."','".($usuario->getEmail())
-			."','".($usuario->getLogin())."'.'".($usuario->getSenha())."'");
-
-			if(!mysqli_query($link, $query)) {die("ERRO! NÃO SALVOU OS DADOS.<br /><br /><a href=\"../view/excluirCliente.html\">VOLTAR</a>");}
-			echo "DADOS SALVOS.<br /><br /><a href=\"../view/cadastrarUsuario.html\">VOLTAR</a>";
+			."','".($usuario->getLogin())."','".($usuario->getSenha())."')";
+			echo $query;
+			if(!mysqli_query($link, $query)) {die("ERRO! NÃO SALVOU OS DADOS.<br /><br /><a href=\"../View/cadastrarUsuario.html\">VOLTAR</a>");}
+			echo "DADOS SALVOS.<br /><br /><a href=\"../View/buscarVoo.html\">VOLTAR</a>";
 		}
 		
 		function excluir($cod, $link) {
