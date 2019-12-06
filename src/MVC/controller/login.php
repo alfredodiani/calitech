@@ -2,7 +2,8 @@
 	include_once("../model/Usuario.php");
 	include_once("../persistence/Connection.php");
 	include_once("../persistence/UsuarioDAO.php");
-
+	echo $_GET["vemail"];
+	echo $_GET["vsenha"];
 	$conexao = new Connection();
 	$conexao->conectar();
 	

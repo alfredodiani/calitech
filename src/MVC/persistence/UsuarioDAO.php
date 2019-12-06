@@ -18,13 +18,13 @@
 			echo "USUARIO EXCLUIDO.<br /><br /><a href=\"../view/excluirUsuario.html\">VOLTAR</a>";
 		}
 		
-		function consultar($cod, $link) {
-			$query = "SELECT * FROM Usuario WHERE ID=".($cod);
+		function logar($login, $senha, $link) {
+			$query = "SELECT * FROM Usuario WHERE login= '".($login)."' AND senha='".($senha)."'";
 			$result = mysqli_query($link, $query);
 			if(!$result) {
 				die("ERRO. Usuario NÃO ENCONTRADO.<br /><br /><a href=\"../view/excluirUsuario.html\">VOLTAR</a>");
 			}
-			return $result;
+			echo "Sucesso.<br /><br /><a href=\"../View/buscarVoo.html\">VOLTAR</a>";
 		}
 		
 		function consultarN($nasc, $link) {
