@@ -2,10 +2,9 @@
 	include_once("../model/Usuario.php");
 	include_once("../persistence/Connection.php");
 	include_once("../persistence/UsuarioDAO.php");
+	$usuario = new Usuario($_POST["vnome"], $_POST["vnasc"], $_POST["vemail"], $_POST["vlogin"], $_POST["vsenha"]);
 
-	$usuario = new Usuario(null, $_POST["nome"], $_POST["nascimento"], $_POST["salario"]);
-	
-	$conexao = new Connection("localhost","root","","calitech");
+	$conexao = new Connection();
 	$conexao->conectar();
 	
 	$usuariodao = new UsuarioDAO();
