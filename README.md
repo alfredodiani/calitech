@@ -16,6 +16,7 @@ Framework Bootstrap: https://getbootstrap.com.br/docs/4.1/getting-started/introd
 ## Regras
 -Ao realiar um commit, apresentar um cometario sobre o que foi feito.
 \-Para lançar uma nova relese, é necessario a concordancia de todo o grupo.
+
 \-Cada branch está relacionada com uma nova versão do projeto
 
 
@@ -24,16 +25,21 @@ Framework Bootstrap: https://getbootstrap.com.br/docs/4.1/getting-started/introd
 \-Código do projeto está na pasta src.
 
 ## Regras aplicadas durante a programação
+
+
 -Nomear funções e variáveis de forma intuitiva. 
+
 \-Escrever o programa de maneira bem simples e direta.
+
 \-Declarar cada variável em uma linha para facilitar a escrita de comentários.
+
 \-Todos os métodos devem realizar apenas uma determinada tarefa
 
 
 ## Boas praticas
 -Solicitar ao usuário valores a serem digitados, com mensagens pertinentes.
 
-\-Mensagens de erros devem ser fáceis de serem compreendidas pelo usuário.
+\-Mensagens de erros devem ser simples e direta. 
 
 
 ## Padrões de notação de código
