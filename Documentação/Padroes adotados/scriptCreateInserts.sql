@@ -11,8 +11,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `calitech` DEFAULT CHARACTER SET utf8 ;
-USE `calitech` ;
+CREATE SCHEMA IF NOT EXISTS `sirepae` DEFAULT CHARACTER SET utf8 ;
+USE `sirepae` ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Usuario`
@@ -22,8 +22,8 @@ CREATE TABLE Usuario (
   `nomeUser` VARCHAR(45) NULL,
   `nascimento` DATE NULL,
   `email` VARCHAR(60) NULL,
-  `login` VARCHAR(45) NULL,
-  `senha` VARCHAR(45) NULL
+  `login` VARCHAR(45) NOT NULL UNIQUE,
+  `senha` VARCHAR(45) NOT NULL
 )
 ENGINE = InnoDB;
 
@@ -53,7 +53,7 @@ CREATE TABLE Voo (
   PRIMARY KEY (`idVoo`),
   CONSTRAINT `fk_Voo_Aviao1`
     FOREIGN KEY (`prefixoAviao`)
-    REFERENCES Aviao (`prefixoAviao`)
+    REFERENCES `Aviao` (`prefixoAviao`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -62,20 +62,20 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Passagem`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `calitech`.`Passagem` (
+CREATE TABLE `Passagem` (
   `idPassagem` INT NOT NULL,
   `idUser` INT NOT NULL,
   `idVoo` INT NOT NULL,
-  `numAssento` INT NULL,
+  `numAssento` INT NOT NULL,
   PRIMARY KEY (`idPassagem`),
   CONSTRAINT `fk_Passagem_Voo1`
     FOREIGN KEY (`idVoo`)
-    REFERENCES `calitech`.`Voo` (`idVoo`)
+    REFERENCES `Voo` (`idVoo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Passagem_Usuario1`
     FOREIGN KEY (`idUser`)
-    REFERENCES `calitech`.`Usuario` (`idUser`)
+    REFERENCES `Usuario` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -84,13 +84,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Admin`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `calitech`.`Admin` (
+CREATE TABLE `Admin` (
   `idUser` INT NOT NULL,
   `cargo` VARCHAR(45) NULL,
   PRIMARY KEY (`idUser`),
   CONSTRAINT `fk_Admin_Usuario1`
     FOREIGN KEY (`idUser`)
-    REFERENCES `calitech`.`Usuario` (`idUser`)
+    REFERENCES `Usuario` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -108,8 +108,10 @@ INSERT INTO Aviao (prefixoAviao, modelo, fabricante, qtdAssentos) VALUES('QER234
 INSERT INTO Aviao (prefixoAviao, modelo, fabricante, qtdAssentos) VALUES('JKL765', 'A318', 'AIRBUS', 100);
 INSERT INTO Aviao (prefixoAviao, modelo, fabricante, qtdAssentos) VALUES('VBN563', '737', 'BOEING', 180);
 INSERT INTO Aviao (prefixoAviao, modelo, fabricante, qtdAssentos) VALUES('GHU2341', 'CS172', 'CESSNA', 150);
+INSERT INTO Aviao (prefixoAviao, modelo, fabricante, qtdAssentos) VALUES('ZXC123', '1111', 'BRA', 500);
 
 Select * from Aviao;
+DELETE FROM Aviao WHERE prefixoAviao='ZXC123';
 
 INSERT INTO Voo (idVoo, origem, destino, dataEmbarque, dataDesembarque, prefixoAviao) VALUES (100, 'LAX', 'CGH', '2019-12-05','2019-12-06','QER2345');
 INSERT INTO Voo (idVoo, origem, destino, dataEmbarque, dataDesembarque, prefixoAviao) VALUES (101, 'CGH', 'SSA', '2019-12-06','2019-12-06','VBN563');
@@ -126,16 +128,20 @@ INSERT INTO Passagem (idPassagem, idUser, idVoo, numAssento) VALUES (2004, 4, 10
 INSERT INTO Passagem (idPassagem, idUser, idVoo, numAssento) VALUES (2005, 4, 104, 32);
 INSERT INTO Passagem (idPassagem, idUser, idVoo, numAssento) VALUES (2006, 3, 103, 64);
 INSERT INTO Passagem (idPassagem, idUser, idVoo, numAssento) VALUES (2007, 5, 104, 11);
-
+INSERT INTO Passagem (idPassagem, idUser, idVoo, numAssento) VALUES (20045, 4, 102, 36);
 select * from Passagem;
 
 INSERT INTO Admin (idUser, cargo) Values (1, 'Atendente');
 
 Select * from admin;
 
-Select U.nomeUser, P.idPassagem, P.numAssento, V.idVoo, V.dataEmbarque, V.origem, V.Destino
-from Usuario U, Passagem P, Voo V
-Where U.idUser = P.idUser AND P.idVoo = V.idVoo;
+select *
+from admin A, usuario U
+where A.idUser = U.idUser;
+
+Select U.nomeUser, P.idPassagem, P.numAssento, V.idVoo, V.dataEmbarque, V.origem, V.destino, A.prefixoAviao, A.modelo, A.fabricante
+from Usuario U, Passagem P, Voo V, Aviao A
+Where U.idUser = P.idUser AND P.idVoo = V.idVoo AND V.prefixoAviao = A.prefixoAviao;
 
 
 
