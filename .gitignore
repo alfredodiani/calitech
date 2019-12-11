@@ -1,4 +1,3 @@
 .gitignore
-calitech/teste.txt
-calitech/*.ig
+*.ig
 teste.txt
