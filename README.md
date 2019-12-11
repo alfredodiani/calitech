@@ -16,17 +16,18 @@ Framework Bootstrap: https://getbootstrap.com.br/docs/4.1/getting-started/introd
 
 ## Regras
 -Ao realiar um commit, apresentar um cometario sobre o que foi feito.
+
 \-Para lançar uma nova relese, é necessario a concordancia de todo o grupo.
 
-\-Cada branch está relacionada com uma nova versão do projeto
 
 
 ## Pastas
 -Toda documentação, diagramas(de classe/sequencia/implantação) do projeto está na pasta Documentação.
 \-Código do projeto está na pasta src.
+\-O código segue o modelo MVC com pastas separadas para Model, View, Controller e Persistence.
+
 
 ## Regras aplicadas durante a programação
-
 
 -Nomear funções e variáveis de forma intuitiva. 
 
