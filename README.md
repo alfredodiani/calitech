@@ -7,7 +7,8 @@ Nosso sistema será para auxiliar uma rede de transportes aéreos, auxilia usuá
 | Linguagem(front-end): HTML/CSS|  |
 | Linguagem(Back-end): PHP | PHP 7.3.9 |
 | Banco de dados: MySQL |  8.0.16  |
-| Inteface: phpmyAdmin | 4.8.5 |
+| Inteface de BD: phpmyAdmin | 4.8.5 |
+| Inteface: MySQL Workbench CE | 8.0 |
 | Servidor: Apache|  2.4.41|
 
 Framework Bootstrap: https://getbootstrap.com.br/docs/4.1/getting-started/introduction/
