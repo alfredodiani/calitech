@@ -1,1 +1,1 @@
-xs
+arquivo de testes para o git ignore
