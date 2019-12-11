@@ -1,5 +1,5 @@
 # CALITECH
-Nosso sistema será para auxiliar uma rede de transportes aéreos, auxilia usuários a comprar passagens aéreas de aviões, com rotas disponíveis. Temos como funcionalidades o cadastro do usuário. E também o cadastro de um avião. O sistema irá permitir compras de passagens aéreas, de acordo com os cadastros realizados anteriormente(avião e usuário). O sistema terá um Administrador, que irá, realizar o cadastro dos aviões e tambem de passagens aéreas, com origem/destino, horario de partida e de chegada. Para a compra de uma passagem será necessário o usuário escolher a viagem desejada, que consequentemente já terá um avião que suporte esse trajeto disponível para essa viagem. Os usuários previstos são adultos que entendem de tecnologia e desejam comprar de forma fácil uma passagem de avião.
+Nosso sistema será para auxiliar uma rede de transportes aéreos, auxilia usuários a comprar passagens aéreas de aviões, com rotas disponíveis. O sistema irá permitir compras de passagens aéreas, de acordo com os cadastros realizados anteriormente(avião e usuário). O sistema terá um Administrador, que irá, realizar o cadastro dos aviões, vôos e passagens. Para a compra de uma passagem será necessário o usuário escolher o vôo desejada, que consequentemente já terá um avião que suporte esse trajeto disponível para essa viagem. Os usuários previstos são adultos que entendem de tecnologia e desejam reservar de forma fácil uma passagem de avião.
 
 ## Tecnologias utilizadas:
 | Tecnologia | Versão |
@@ -28,38 +28,30 @@ W3schools: https://www.w3schools.com/
 ## Pastas
 -Toda documentação, diagramas(de classe/sequencia/implantação), requistos, do projeto está na pasta Documentação.
 
-\-Código do projeto está na pasta src.
+-Código do projeto está na pasta src.
 
-\-O código segue o modelo MVC com pastas separadas para Model, View, Controller e Persistence.
+-O Script SQL para criação do banco e inserts iniciais deve estar na pasta ./SRC/
 
-
-## Regras aplicadas durante a programação
-
--Identar o código.
-
-\-Comentar o código.
-
-\-Nomear funções e variáveis de forma intuitiva. 
-
-\-Escrever o programa de maneira bem e direta. 
-
-\-Declarar cada variável em uma linha para facilitar a escrita de comentários. 
-
-\- Funções devem possuir nome intuitivo.
-
-\- Variáveis devem iniciar com letras minúsculas.
-
-\-Todos os métodos devem realizar apenas uma determinada tarefa.
+-O código segue o modelo MVC com pastas separadas para Model, View, Controller e Persistence.
 
 
+## Boas práticas de codificação
 
-## Boas praticas
--Solicitar ao usuário valores a serem digitados, com mensagens pertinentes.
+-Indentar o código.
 
--\Utilizar padrão MVC
+-Comentar o código antes de cada metodo ou função.
 
+-Nomear funções e variáveis de forma intuitiva.  
 
-\-Mensagens de erros devem ser simples e direta. 
+-Declarar cada variável em uma linha para facilitar a escrita de comentários. 
+
+-Todos os métodos devem realizar apenas uma determinada tarefa.
+
+-Utilizar padrão MVC;
+
+-Variáveis devem ser lowercase (exemplo: $variavel);
+
+-Métodos devem ser camelcase (exemplo: $getVariavel()).
 
 
 ## Padrões de notação de código
