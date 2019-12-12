@@ -5,14 +5,14 @@
 		function cadastrar($passagem, $link) {
 			$query = "INSERT INTO Passagem (idPassagem, idUser, idVoo, numAssento) values (".($passagem->getIdPassagem()).","
 			.($passagem->getIdUser()).",".($passagem->getIdVoo()).",".($passagem->getNumAssento()).")";
-			if(!mysqli_query($link, $query)) {die("ERRO! NÃO SALVOU OS DADOS.<br /><br /><a href=\"../View/cadastrarPassagem.html\">VOLTAR</a>");}
+			if(!mysqli_query($link, $query)) {die("ERRO! NÃO SALVOU OS DADOS.<br /><br /><a href=\"../controller/listarPassagem.php\">VOLTAR</a>");}
 			echo "DADOS SALVOS.<br /><br /><a href=\"../controller/listarPassagem.php\">VOLTAR</a>";
 		}
 		
 		function excluir($cod, $link) {
 			$query = "DELETE FROM Passagem WHERE idPassagem=".($cod);
 			if(!mysqli_query($link, $query)) {
-				die("ERRO. PASSAGEM NÃO EXCLUIDA.<br /><br /><a href=\"../view/excluirPassagem.html\">VOLTAR</a>");
+				die("ERRO. PASSAGEM NÃO EXCLUIDA.<br /><br /><a href=\"../controller/listarPassagem.php\">VOLTAR</a>");
 			}
 			echo "PASSAGEM EXCLUIDA.<br /><br /><a href=\"../controller/listarPassagem.php\">VOLTAR</a>";
 		}

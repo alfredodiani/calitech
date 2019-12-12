@@ -1,8 +1,10 @@
 <?php
-	include_once("../model/Usuario.php");
+	include_once("../model/Admin.php");
 
-	class UsuarioDAO {
-		function cadastrar($usuario, $link) {
+	class AdminDAO {
+		
+		/*
+		function cadastrar($Admin, $link) {
 			$query = "INSERT INTO Usuario (nomeUser, nascimento, email, login, senha) values ('".($usuario->getNome())."','".($usuario->getNascimento())."','".($usuario->getEmail())
 			."','".($usuario->getLogin())."','".($usuario->getSenha())."')";
 			echo $query;
@@ -17,9 +19,9 @@
 			}
 			echo "USUARIO EXCLUIDO.<br /><br /><a href=\"../view/excluirUsuario.html\">VOLTAR</a>";
 		}
-		
+		*/
 		function login($login, $senha, $link) {
-			$query = "SELECT * FROM Usuario U WHERE U.login= '".($login)."' AND U.senha='".($senha)."'";
+			$query = "SELECT * FROM Usuario U, Admin A WHERE U.login= '".($login)."' AND U.senha='".($senha)."' AND U.idUser = A.idUser";
 			$result = mysqli_query($link, $query);
 			if(!$result) {
 				die("ERRO. Usuario NÃO ENCONTRADO.<br /><br /><a href=\"../view/excluirUsuario.html\">VOLTAR</a>");
@@ -31,7 +33,7 @@
 				}
 			}
 		}
-		
+		/*
 		function consultarN($nasc, $link) {
 			$query = "SELECT * FROM Usuario WHERE nascimento>='".($nasc)."'";
 			$result = mysqli_query($link, $query);
@@ -48,5 +50,6 @@
 			}
 			echo "DADOS SALVOS.<br /><br /><a href=\"../view/alterarCliente.html\">VOLTAR</a>";
 		}
+		*/
 	}
 ?>

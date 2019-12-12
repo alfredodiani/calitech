@@ -32,8 +32,8 @@
 		
 		echo "</form>";
 	}else{
-		echo "<h3>Nenhum avião cadastrado com esse prefixo.</h3>";
-		echo "  <input type='button' onclick=\"window.location.href = './listarAviao.php';\" value='Voltar'/>";
+		echo "<h3>Nenhuma passagem cadastrada com esse ID.</h3>";
+		echo "  <input type='button' onclick=\"window.location.href = '../controller/listarPassagem.php';\" value='Voltar'/>";
 	}
 	
 ?>
