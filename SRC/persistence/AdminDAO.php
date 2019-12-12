@@ -20,6 +20,8 @@
 			echo "USUARIO EXCLUIDO.<br /><br /><a href=\"../view/excluirUsuario.html\">VOLTAR</a>";
 		}
 		*/
+		
+		// funçao para fazer login, retorna true caso os dados estejam certos ou false caso estejam errados
 		function login($login, $senha, $link) {
 			$query = "SELECT * FROM Usuario U, Admin A WHERE U.login= '".($login)."' AND U.senha='".($senha)."' AND U.idUser = A.idUser";
 			$result = mysqli_query($link, $query);

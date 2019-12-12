@@ -18,6 +18,8 @@
 			echo "USUARIO EXCLUIDO.<br /><br /><a href=\"../view/excluirUsuario.html\">VOLTAR</a>";
 		}
 		
+		
+		//verifica se o login e senha estão presentes no BD e retorna true ou false
 		function login($login, $senha, $link) {
 			$query = "SELECT * FROM Usuario U WHERE U.login= '".($login)."' AND U.senha='".($senha)."'";
 			$result = mysqli_query($link, $query);
