@@ -15,7 +15,7 @@ W3schools: https://www.w3schools.com/
 
 
 ## Regras GitHub
-- Quando for inserir uma nova branch, fazer a revisão do código(reviewer) entre 2 ou mais mebros do grupo. 
+\-Quando for inserir uma nova branch, fazer a revisão do código(reviewer) entre 2 ou mais mebros do grupo. 
 
 \-Ao realiar um commit, apresentar um cometario sobre o que foi feito, eum numero de issue, para que ela seja encerrada.
 
