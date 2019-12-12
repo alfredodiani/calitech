@@ -6,10 +6,7 @@
 
 	$passagem = new Passagem($_POST["cidpassagem"], $_POST["ciduser"], $_POST["cidvoo"],$_POST["cqtdassentos"]);
 
-	echo "<br>";
-	echo "<br>";
-	$passagem->imprimir();
-
+	
 	$conexao = new Connection();
 	$conexao->conectar();
 
