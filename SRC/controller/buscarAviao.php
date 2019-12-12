@@ -8,7 +8,7 @@
 	$conexao->conectar();
 	
 	$aviaodao = new AviaoDAO();
-	$aviaodao->excluir($prefixo,$conexao->getLink());
+	$aviaodao->consultar($prefixo,$conexao->getLink());
 	
 	$conexao->fechar();
 	
