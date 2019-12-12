@@ -58,7 +58,7 @@ W3schools: https://www.w3schools.com/
 Palavra com a primeira letra minúscula e a primeira letra de cada palavra parte posterior usando letra maiúscula.
 
 
-### Projeto
+## Projeto
 Trabalho realizado para disciplina Engenharia de Software, da Universidade Federal de Lavras (Dezembro/2019). 
 
  
